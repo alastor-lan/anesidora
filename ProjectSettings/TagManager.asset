@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Weapon
+  - Monster
+  - Bullet
+  - Door
+  - Wall
+  - Room
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Player
+  - RayLayer
+  - Obstacle
+  - Monster
+  - Weapon
+  - Room
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 184484179
+    locked: 0
+  - name: Midground
+    uniqueID: 1088719595
+    locked: 0
+  - name: Monster
+    uniqueID: 4277144037
+    locked: 0
+  - name: Player
+    uniqueID: 2085945725
+    locked: 0
+  - name: Weapon
+    uniqueID: 3683397245
+    locked: 0
+  - name: Foregtound
+    uniqueID: 3009499793
+    locked: 0
