@@ -16,13 +16,17 @@ public class NPCDialogue : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         canChat = false;
+        Debug.Log(canChat);
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        
+          if (Input.GetKeyDown(KeyCode.F))
         {
             Say();
         }
+        
+       
     }
     private void OnMouseDown()
     {

@@ -17,7 +17,7 @@ public class GameOver : MonoBehaviour
     {
 
     }
-    public void pause()
+    public void Over()
     {
         GameManager.instance.GameOver();
     }

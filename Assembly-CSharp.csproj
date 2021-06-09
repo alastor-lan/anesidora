@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\MagicCrystal.cs" />
     <Compile Include="Assets\Scripts\Map\Door.cs" />
+    <Compile Include="Assets\Scripts\Map\DoorTips.cs" />
     <Compile Include="Assets\Scripts\Map\EndDoor.cs" />
     <Compile Include="Assets\Scripts\Map\TipsBoard.cs" />
     <Compile Include="Assets\Scripts\Map\Treasure.cs" />
@@ -93,6 +94,7 @@
     <Compile Include="Assets\Scripts\Room\RoomStart.cs" />
     <Compile Include="Assets\Scripts\Room\RoomTreasure.cs" />
     <Compile Include="Assets\Scripts\Room\RoomTrig.cs" />
+    <Compile Include="Assets\Scripts\Sphinx.cs" />
     <Compile Include="Assets\Scripts\UI\BeAttackText.cs" />
     <Compile Include="Assets\Scripts\UI\LittleMap.cs" />
     <Compile Include="Assets\Scripts\UI\MapItem.cs" />

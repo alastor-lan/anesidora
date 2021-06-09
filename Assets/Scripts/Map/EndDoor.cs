@@ -6,11 +6,20 @@ using UnityEngine.SceneManagement;
 public class EndDoor : MonoBehaviour
 {
     public string chapterName;
+    public bool isRight;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.tag =="Player")
+        if (isRight)
         {
-            SceneManager.LoadScene(chapterName);
+            if (collision.transform.tag =="Player")
+            {
+               SceneManager.LoadScene(chapterName);
+             }
+        }
+        else
+         if (collision.transform.tag == "Player")
+        {
+            GameManager.instance.GameOver();
         }
     }
 }

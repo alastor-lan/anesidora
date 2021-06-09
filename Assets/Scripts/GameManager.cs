@@ -90,6 +90,13 @@ public class GameManager : MonoBehaviour
         gamePauseGO.SetActive(true);
         continued.onClick.AddListener(() => { Time.timeScale = 1; gamePauseGO.SetActive(false); });
     }
+    public void ContinueGame()
+    {
+        continued.onClick.AddListener(() =>
+        {
+            Time.timeScale = 1;
+        });
+        }
     public void UpdatePlayerRoom(Room room)
     {
         this.room = room;
