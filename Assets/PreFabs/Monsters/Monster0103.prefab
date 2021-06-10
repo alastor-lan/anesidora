@@ -232,7 +232,7 @@ MonoBehaviour:
   hp: 3
   coin: 1
   magic: 2
-  isStart: 0
+  isStart: 1
   attackRange: 3
   trackingRange: 8
   trackingCD: 3
@@ -307,6 +307,8 @@ MonoBehaviour:
   pos: {fileID: 0}
   CD: 0.5
   timing: 0
+  shoot: 
+  idle: 
 --- !u!1001 &458077210252194407
 PrefabInstance:
   m_ObjectHideFlags: 0

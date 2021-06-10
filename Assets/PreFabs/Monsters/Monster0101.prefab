@@ -230,8 +230,8 @@ MonoBehaviour:
   hp: 3
   coin: 1
   magic: 1
-  isStart: 0
-  strollCD: 1
+  isStart: 1
+  strollCD: 0.5
   attackCD: 0.5
   speed: 2
   attack: 1
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e66791cc88bbba34d85134bdbc65260e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  randomRadius: 5
+  randomRadius: 50
   speed: 2
   nextWaypointDistance: 1
   reachedEndOfPath: 0

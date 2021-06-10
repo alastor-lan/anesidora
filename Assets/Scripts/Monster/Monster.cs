@@ -52,7 +52,7 @@ public class Monster : MonoBehaviour, BeAttack
     }
     public virtual void Initialization(Room room)
     {
-        this.room = room;
+        //this.room = room;
         targetPosition = GameObject.FindGameObjectWithTag("Player").transform;
     }
 }
