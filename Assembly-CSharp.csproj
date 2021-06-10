@@ -70,6 +70,9 @@
     <Compile Include="Assets\OutSiders\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\OutSiders\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
     <Compile Include="Assets\Scripts\Functions\Coin.cs" />
+    <Compile Include="Assets\Scripts\Functions\EnLighten1.cs" />
+    <Compile Include="Assets\Scripts\Functions\EnLighten2.cs" />
+    <Compile Include="Assets\Scripts\Functions\EnLighten3.cs" />
     <Compile Include="Assets\Scripts\Functions\GameOver.cs" />
     <Compile Include="Assets\Scripts\Functions\GamePause.cs" />
     <Compile Include="Assets\Scripts\Functions\HealthBar.cs" />
@@ -80,6 +83,7 @@
     <Compile Include="Assets\Scripts\Map\EndDoor.cs" />
     <Compile Include="Assets\Scripts\Map\TipsBoard.cs" />
     <Compile Include="Assets\Scripts\Map\Treasure.cs" />
+    <Compile Include="Assets\Scripts\Monster\Boss.cs" />
     <Compile Include="Assets\Scripts\Monster\Monster.cs" />
     <Compile Include="Assets\Scripts\Monster\Monster0101.cs" />
     <Compile Include="Assets\Scripts\Monster\Monster0102.cs" />

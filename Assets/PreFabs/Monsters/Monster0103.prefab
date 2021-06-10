@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 2866159840651634502}
   - component: {fileID: 7449038503546257519}
   - component: {fileID: 414121573}
+  - component: {fileID: 716505439136709681}
   m_Layer: 11
   m_Name: Monster0103
   m_TagString: Monster
@@ -283,6 +284,29 @@ MonoBehaviour:
   nextWaypointDistance: 1
   reachedEndOfPath: 0
   nextTargetPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &716505439136709681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7438451015784995010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd1878966967941429c8e5485fcd2b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shake: 5
+  attack: 1
+  role: 
+  target: {x: 0, y: 0, z: 0}
+  weaponName: 
+  bulletPrefab: {fileID: 2718453721348544251, guid: 664804d7c8b73d44c922523edbc9876a,
+    type: 3}
+  bulletForce: 10
+  pos: {fileID: 0}
+  CD: 0.5
+  timing: 0
 --- !u!1001 &458077210252194407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -363,7 +387,7 @@ PrefabInstance:
     - target: {fileID: 4353834934884547692, guid: 95281ba2b17b6ed45b1b9bf510f69d34,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8130695784008772512, guid: 95281ba2b17b6ed45b1b9bf510f69d34,
         type: 3}

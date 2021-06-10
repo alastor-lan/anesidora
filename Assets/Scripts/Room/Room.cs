@@ -22,7 +22,10 @@ public class Room : MonoBehaviour
     {
 
     }
-    
+    public virtual void BossDie(Boss boss)
+    {
+
+    }
     public virtual void PlayerEnter()
     {
         GameManager.instance.UpdatePlayerRoom(this);
