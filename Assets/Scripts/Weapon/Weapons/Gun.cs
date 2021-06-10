@@ -9,6 +9,8 @@ public class Gun : Weapon
     public Transform pos;
     public float CD = 1;
     public float timing = 0;
+    public string shoot;
+    public string idle;
     public override void ShootButtonDown()
     {
         if (Time.time - timing >=CD)
@@ -17,7 +19,7 @@ public class Gun : Weapon
             GameObject bullet = Instantiate(bulletPrefab, pos.position, pos.rotation*Quaternion.AngleAxis(Random.Range(0,shake),Vector3.forward));
             bullet.GetComponent<Bullet>().Initialization(attack, role, bulletForce);
             //射击动画效果
-            GetComponent<Animator>().Play("Shoot");
+            GetComponent<Animator>().Play(shoot);
         }
     }
     public override void ShootButtonPressed()
@@ -28,7 +30,7 @@ public class Gun : Weapon
             GameObject bullet = Instantiate(bulletPrefab, pos.position, pos.rotation*Quaternion.AngleAxis(Random.Range(0,shake),Vector3.forward));
             bullet.GetComponent<Bullet>().Initialization(attack, role, bulletForce);
             //射击动画效果
-            GetComponent<Animator>().Play("Shoot");
+            GetComponent<Animator>().Play(shoot);
         }
     }
     public override void UpdateLookAt(Vector3 target)
