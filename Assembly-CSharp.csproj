@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Map\Door.cs" />
     <Compile Include="Assets\Scripts\Map\DoorTips.cs" />
     <Compile Include="Assets\Scripts\Map\EndDoor.cs" />
+    <Compile Include="Assets\Scripts\Map\HideDoor.cs" />
     <Compile Include="Assets\Scripts\Map\TipsBoard.cs" />
     <Compile Include="Assets\Scripts\Map\Treasure.cs" />
     <Compile Include="Assets\Scripts\Monster\Monster.cs" />
@@ -667,6 +668,9 @@
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>C:/Users/Administrator/Documents/GitHub/anesidora/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+      <HintPath>C:/Users/Administrator/Documents/GitHub/anesidora/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="com.unity.cinemachine.editor">
       <HintPath>C:/Users/Administrator/Documents/GitHub/anesidora/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
@@ -675,9 +679,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/Administrator/Documents/GitHub/anesidora/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/Administrator/Documents/GitHub/anesidora/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

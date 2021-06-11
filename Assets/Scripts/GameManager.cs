@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
+
 interface BeAttack
 {
     void BeAttack(float data);
@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverGO.SetActive(true);
-        restart.onClick.AddListener(() => { SceneManager.LoadScene("Chapter01"); });
+        restart.onClick.AddListener(() => { SceneManager.LoadScene("ch1"); });
     }
     public void Gamepause()
     {

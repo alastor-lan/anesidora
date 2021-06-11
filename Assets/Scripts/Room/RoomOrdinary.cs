@@ -5,7 +5,7 @@ using UnityEngine;
 public class RoomOrdinary : Room
 {
     public GameObject[] monstersGroup;
-
+    public GameObject[] doors; //v
     int monstersGroupNumber;
     List<Monster> monsters = new List<Monster>();
     public override void Initialization()
@@ -18,6 +18,7 @@ public class RoomOrdinary : Room
             monstersGroup[i].SetActive(false);
         }
         LoadMonstersInGroup(monstersGroupNumber);
+        
     }
     public override void UpdateRoomInfo()
     {
@@ -33,19 +34,23 @@ public class RoomOrdinary : Room
             }
             else
             {
-                isExplored = true;
-                OpenDoor();
+             //   isExplored = true;
+               foreach(GameObject door in doors)
+                door.SetActive(true); //v
+              //  OpenDoor();
             }
         }
     }
     public override void PlayerEnter()
     {
         base.PlayerEnter();
-        if (!isExplored)
-        {
-            CloseDoor();
-            ActivationMonster();
-        }
+        // if (!isExplored)
+        // {
+        foreach (GameObject door in doors)
+            door.SetActive(false); //v
+          //  CloseDoor();
+            ActivationMonster(); //v
+      //  }
     }
     public override void MonsterDie(Monster monster)
     {

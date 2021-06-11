@@ -23,7 +23,7 @@ public class RoomBoss : Room
         base.PlayerEnter();
         if (!isExplored)
         {
-            CloseDoor();
+            //CloseDoor();
             Boss.isStart = true;
             healthBar.SetActive(true);
         }
