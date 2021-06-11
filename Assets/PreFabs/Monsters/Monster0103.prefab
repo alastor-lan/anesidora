@@ -204,7 +204,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.041377485, y: 0.52096426}
+  m_Offset: {x: -0.022912681, y: -0.26361322}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -215,7 +215,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.70775497, y: 1}
+  m_Size: {x: 1.933556, y: 1.4544547}
   m_EdgeRadius: 0
 --- !u!114 &2866159840651634502
 MonoBehaviour:
@@ -297,16 +297,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shake: 5
-  attack: 1
+  attack: 3
   role: 
   target: {x: 0, y: 0, z: 0}
   weaponName: 
-  bulletPrefab: {fileID: 2718453721348544251, guid: 664804d7c8b73d44c922523edbc9876a,
+  bulletPrefab: {fileID: 2718453721348544251, guid: 464bb078d0088ee4d97672e2f78775e6,
     type: 3}
   bulletForce: 10
   pos: {fileID: 0}
   CD: 0.5
   timing: 0
+  shoot: 
+  idle: 
 --- !u!1001 &458077210252194407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -314,6 +316,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7438451015784995014}
     m_Modifications:
+    - target: {fileID: 1621352590444013463, guid: 95281ba2b17b6ed45b1b9bf510f69d34,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 2718453721348544251, guid: 464bb078d0088ee4d97672e2f78775e6,
+        type: 3}
     - target: {fileID: 3836749207090153721, guid: 95281ba2b17b6ed45b1b9bf510f69d34,
         type: 3}
       propertyPath: m_Layer

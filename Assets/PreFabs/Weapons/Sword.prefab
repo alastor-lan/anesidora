@@ -22,6 +22,12 @@ PrefabInstance:
       propertyPath: idle
       value: Sword_Idle
       objectReference: {fileID: 0}
+    - target: {fileID: 1621352590444013463, guid: 95281ba2b17b6ed45b1b9bf510f69d34,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 2718453721348544251, guid: 0a57fc9e3e0eb44439893af8f25c027d,
+        type: 3}
     - target: {fileID: 2075498858112542409, guid: 95281ba2b17b6ed45b1b9bf510f69d34,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x

@@ -119,7 +119,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.5662891}
+  m_Offset: {x: 0.0314973, y: 0.3352397}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -130,7 +130,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.65625, y: 0.848318}
+  m_Size: {x: 0.53726023, y: 0.37221634}
   m_EdgeRadius: 0
 --- !u!114 &6751850983558914439
 MonoBehaviour:
@@ -150,11 +150,12 @@ MonoBehaviour:
   isStart: 0
   pos: {fileID: 36846859768953}
   attackRange: 5
-  bulletPre: {fileID: 5800850033905454681, guid: d2f2a8f7efd183a46ae19c468f6ba3ae,
+  bulletPre: {fileID: 2718453721348544251, guid: 1007fb7771782e04b9eb239db12dc4f4,
     type: 3}
-  bulletCount: 20
+  trackingRange: 0
+  bulletCount: 5
   bulletForce: 15
-  CD: 5
+  CD: 2
   attack: 1
 --- !u!1 &5201365688178933789
 GameObject:
