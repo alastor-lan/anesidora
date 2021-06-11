@@ -9,14 +9,14 @@ public class DoorTips : MonoBehaviour
     // Start is called before the first frame update
     public Flowchart flowChart;
     private bool canChat = false;
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(UnityEngine.Collision2D other)
     {
         canChat = true;
         Debug.Log("碰撞发生");
         Debug.Log(canChat);
         
     }
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnCollisionExit2D(UnityEngine.Collision2D other)
     {
         canChat = false;
 
