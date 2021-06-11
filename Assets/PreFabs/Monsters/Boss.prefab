@@ -197,6 +197,7 @@ MonoBehaviour:
   strollCD: 3
   attackCD: 1
   weapon: {fileID: 7085732011703035740}
+  MaxHP: 0
 --- !u!1 &7106520548308565792
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +370,7 @@ PrefabInstance:
     - target: {fileID: 7927202604729864306, guid: dedbe0eab59ab0d4db7b5297fe0cb8d9,
         type: 3}
       propertyPath: attack
-      value: 1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7927202604729864306, guid: dedbe0eab59ab0d4db7b5297fe0cb8d9,
         type: 3}
