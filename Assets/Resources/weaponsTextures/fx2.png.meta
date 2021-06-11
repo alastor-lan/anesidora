@@ -23,6 +23,12 @@ TextureImporter:
   - first:
       213: -7917433173987629803
     second: fx2_6
+  - first:
+      213: -3542968665347180828
+    second: fx2_7
+  - first:
+      213: -7335716532804217845
+    second: fx2_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -254,7 +260,7 @@ TextureImporter:
         width: 35
         height: 31
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -262,6 +268,48 @@ TextureImporter:
       bones: []
       spriteID: 515e2930a70af1290800000000000000
       internalID: -7917433173987629803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx2_7
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 334
+        width: 18
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e634a335c8d4dec0800000000000000
+      internalID: -3542968665347180828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fx2_8
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 333
+        width: 17
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b049e310eac423a90800000000000000
+      internalID: -7335716532804217845
       vertices: []
       indices: 
       edges: []
