@@ -7,6 +7,7 @@ public class EnLighten3 : MonoBehaviour
     private Animator animator;
     private bool canLighten;
     public GameObject endDoor;
+    public GameObject goodDoor;
     // public bool isLight1,isLight2,isLight3;
     // public GameObject torch1,torch2,torch3;
     public GameObject torch1;
@@ -45,6 +46,7 @@ public class EnLighten3 : MonoBehaviour
                 canChat = true;
                 torch3.GetComponent<Animator>().SetBool("isLight3", true);
                 endDoor.SetActive(true);
+                goodDoor.SetActive(true);
 
              
 

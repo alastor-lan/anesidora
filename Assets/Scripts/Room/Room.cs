@@ -4,14 +4,14 @@ using UnityEngine;
 //因为还没写随机生成算法所以先手动输入数据
 public class Room : MonoBehaviour
 {
-    public Transform[] doors;
+    //public Transform[] doors;
     public bool isExplored;
     public int roomNum;
     public Room[] nextRooms;
     public virtual void Initialization()
     {
-        isExplored = false;
-        OpenDoor();
+        /*isExplored = false;*/
+        /*OpenDoor();*/
     }
     
     public virtual void UpdateRoomInfo()
@@ -28,9 +28,9 @@ public class Room : MonoBehaviour
     }
     public virtual void PlayerEnter()
     {
-        GameManager.instance.UpdatePlayerRoom(this);
+       GameManager.instance.UpdatePlayerRoom(this);
     }
-    public void OpenDoor()
+   /* public void OpenDoor()
     {
         foreach (Transform door in doors)
         {
@@ -53,5 +53,5 @@ public class Room : MonoBehaviour
             
             door.GetComponentInChildren<Collider2D>(true).gameObject.SetActive(true);
         }
-    }
+    }*/
 }

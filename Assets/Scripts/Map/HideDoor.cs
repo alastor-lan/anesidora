@@ -12,14 +12,14 @@ public class HideDoor : MonoBehaviour
     public GameObject door;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-  if (collision.transform.tag == "Player")
-            {
+        if (collision.transform.tag == "Player")
+         {
             hidewall.SetActive(false);
             hideroom.SetActive(true);
-            //door.SetActive(false);
+            door.SetActive(false);
            // this.GameObject.SetActive(false);
 
-        }
+         }
         }
 
 }

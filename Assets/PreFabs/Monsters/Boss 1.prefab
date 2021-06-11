@@ -308,7 +308,7 @@ MonoBehaviour:
   pos: {fileID: 6001423823947193107}
   CD: 1
   angle: 10
-  mafnification: 0
+  magnification: 0
   boss: {fileID: 3184445196601015731}
 --- !u!1 &6001423823947193108
 GameObject:
@@ -355,7 +355,7 @@ PrefabInstance:
     - target: {fileID: 523268475064189199, guid: dedbe0eab59ab0d4db7b5297fe0cb8d9,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1169264255598123040, guid: dedbe0eab59ab0d4db7b5297fe0cb8d9,
         type: 3}
@@ -461,6 +461,16 @@ PrefabInstance:
         type: 3}
       propertyPath: angle
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927202604729864306, guid: dedbe0eab59ab0d4db7b5297fe0cb8d9,
+        type: 3}
+      propertyPath: shake
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927202604729864306, guid: dedbe0eab59ab0d4db7b5297fe0cb8d9,
+        type: 3}
+      propertyPath: magnification
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dedbe0eab59ab0d4db7b5297fe0cb8d9, type: 3}

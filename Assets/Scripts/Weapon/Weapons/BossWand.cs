@@ -9,7 +9,7 @@ public class BossWand : Weapon
     public Transform pos;
     public float CD = 1;
     public float angle;
-    public int mafnification;
+    public int magnification;
     float timingCD = 0;
     public Boss boss;
     public override void ShootButtonDown()
@@ -27,10 +27,10 @@ public class BossWand : Weapon
             //射击动画效果
             GetComponent<Animator>().Play("Shoot");
         }
-        if (boss.hp <= boss.currentHP / mafnification)
+        if (boss.hp <= boss.currentHP /2)
         {
             float newAttack = attack;
-            attack = 2 * newAttack;
+            attack = magnification  * newAttack;
         }
     }
     public override void UpdateLookAt(Vector3 target)

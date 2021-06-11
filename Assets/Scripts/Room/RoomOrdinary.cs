@@ -5,14 +5,16 @@ using UnityEngine;
 public class RoomOrdinary : Room
 {
     public GameObject[] monstersGroup;
-    public GameObject[] doors; //v
+    public GameObject[] doors;
+    //public GameObject door1;
+   // public GameObject door2; //v
     int monstersGroupNumber;
     List<Monster> monsters = new List<Monster>();
     public override void Initialization()
     {
         base.Initialization();
         //设置当前房间的怪物显示，读取当前怪物表，设置怪物的room
-        monstersGroupNumber = 0;
+         monstersGroupNumber = 0;
         for (int i = 1; i < monstersGroup.Length; i++)
         {
             monstersGroup[i].SetActive(false);
@@ -35,9 +37,10 @@ public class RoomOrdinary : Room
             else
             {
              //   isExplored = true;
-               foreach(GameObject door in doors)
-                door.SetActive(true); //v
-              //  OpenDoor();
+              foreach(GameObject door in doors)
+                door.SetActive(true);
+               //v
+                                      //  OpenDoor();
             }
         }
     }
@@ -47,9 +50,9 @@ public class RoomOrdinary : Room
         // if (!isExplored)
         // {
         foreach (GameObject door in doors)
-            door.SetActive(false); //v
-          //  CloseDoor();
-            ActivationMonster(); //v
+            door.SetActive(false);//v
+                                 //  CloseDoor();
+        ActivationMonster(); //v
       //  }
     }
     public override void MonsterDie(Monster monster)

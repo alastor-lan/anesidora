@@ -37,8 +37,8 @@ public class GameManager : MonoBehaviour
     public GameObject coinPre;
     public GameObject mpPre;
 
-    PlayerControl player;
-    Room room;
+   public PlayerControl player;
+  Room room;
     private void Awake()
     {
         instance = this;

@@ -7,8 +7,8 @@ using UnityEngine;
 [Serializable]
 public class SpecificValue
 {
-    public float realValue;
-    public float maxValue;
+    public float realValue=10;
+    public float maxValue=10;
     public float specificValue
     {
         get { return realValue / maxValue; }

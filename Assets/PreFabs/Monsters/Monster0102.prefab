@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4766880523568425210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.135, y: -1.208, z: 0}
+  m_LocalScale: {x: 2.1352324, y: 2.2076483, z: 1}
   m_Children:
   - {fileID: 36846859768953}
   - {fileID: 7352453342333991592}
@@ -153,9 +153,9 @@ MonoBehaviour:
   bulletPre: {fileID: 2718453721348544251, guid: 1007fb7771782e04b9eb239db12dc4f4,
     type: 3}
   trackingRange: 0
-  bulletCount: 5
+  bulletCount: 10
   bulletForce: 15
-  CD: 2
+  CD: 0.5
   attack: 1
 --- !u!1 &5201365688178933789
 GameObject:
