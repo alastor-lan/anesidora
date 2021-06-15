@@ -8830,7 +8830,7 @@ MonoBehaviour:
   m_Follow: {fileID: 1580104643}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 12.62
+    OrthographicSize: 20
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -10216,7 +10216,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 12.62
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -14316,7 +14316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1198362521}
+  selectedFlowchart: {fileID: 698039569}
 --- !u!4 &2035694783
 Transform:
   m_ObjectHideFlags: 1

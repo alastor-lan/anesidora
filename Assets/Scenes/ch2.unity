@@ -31466,6 +31466,11 @@ PrefabInstance:
       propertyPath: isRight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8875922452500947069, guid: 734cdfba62b748e478c389c881cf144b,
+        type: 3}
+      propertyPath: newchapterPassword
+      value: ch3
+      objectReference: {fileID: 0}
     - target: {fileID: 8933397524775290838, guid: 734cdfba62b748e478c389c881cf144b,
         type: 3}
       propertyPath: m_LocalPosition.x
