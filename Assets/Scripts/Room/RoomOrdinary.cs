@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class RoomOrdinary : Room
 {
     public GameObject[] monstersGroup;
     public GameObject[] doors;
-    //public GameObject door1;
-   // public GameObject door2; //v
+  
     int monstersGroupNumber;
     List<Monster> monsters = new List<Monster>();
     public override void Initialization()
@@ -36,13 +36,14 @@ public class RoomOrdinary : Room
             }
             else
             {
-             //   isExplored = true;
-              foreach(GameObject door in doors)
+                
+                foreach(GameObject door in doors)
                 door.SetActive(true);
-               //v
-                                      //  OpenDoor();
+                //v
             }
         }
+ 
+
     }
     public override void PlayerEnter()
     {
@@ -81,4 +82,5 @@ public class RoomOrdinary : Room
             monster.isStart = true;
         }
     }
+    
 }

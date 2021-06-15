@@ -3605,7 +3605,6 @@ MonoBehaviour:
   troops: []
   coinPre: {fileID: 1006860353}
   mpPre: {fileID: 1477790834}
-  player: {fileID: 0}
 --- !u!4 &129595583
 Transform:
   m_ObjectHideFlags: 0
@@ -37237,6 +37236,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2937975391746533797, guid: 129b505a9349c354bbebd72d6a5c3953,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2937975391746533799, guid: 129b505a9349c354bbebd72d6a5c3953,
         type: 3}

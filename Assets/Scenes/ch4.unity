@@ -3865,7 +3865,6 @@ MonoBehaviour:
   troops: []
   coinPre: {fileID: 1006860353}
   mpPre: {fileID: 1477790834}
-  player: {fileID: 1234575280}
 --- !u!4 &129595583
 Transform:
   m_ObjectHideFlags: 0
@@ -48732,6 +48731,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2937975391746533797, guid: 129b505a9349c354bbebd72d6a5c3953,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2937975391746533799, guid: 129b505a9349c354bbebd72d6a5c3953,
         type: 3}
       propertyPath: playerHP.realValue
@@ -48791,18 +48795,6 @@ MonoBehaviour:
     m_DirectionMode: 0
     m_DissipationMode: 2
     m_DissipationDistance: 1000
---- !u!114 &1234575280 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2937975391746533799, guid: 129b505a9349c354bbebd72d6a5c3953,
-    type: 3}
-  m_PrefabInstance: {fileID: 1234575275}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1234575276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 060b74adb640c1a45be3ba7c024844d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1242582939
 GameObject:
   m_ObjectHideFlags: 0

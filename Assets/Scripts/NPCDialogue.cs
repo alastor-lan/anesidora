@@ -5,6 +5,7 @@ using Fungus;
 
 public class NPCDialogue : MonoBehaviour
 {
+    public string FlowName;
     public string ChatName;//这个名字是FlowChart中，块的名字，需要把这个变量设定为flowchart中块的名字
     // Start is called before the first frame update
     private bool canChat = false;
@@ -37,7 +38,7 @@ public class NPCDialogue : MonoBehaviour
         if (canChat)
         {
             //对话
-            Flowchart flowChart = GameObject.Find("Flowchart").GetComponent<Flowchart>();
+            Flowchart flowChart = GameObject.Find(FlowName).GetComponent<Flowchart>();
             if (flowChart.HasBlock(ChatName))
             {
                 //执行对话

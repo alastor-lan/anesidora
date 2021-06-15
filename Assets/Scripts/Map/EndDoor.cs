@@ -7,6 +7,7 @@ public class EndDoor : MonoBehaviour
 {
     public string chapterName;
     public bool isRight;
+   
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (isRight)
@@ -19,7 +20,9 @@ public class EndDoor : MonoBehaviour
         else
          if (collision.transform.tag == "Player")
         {
-            GameManager.instance.GameOver();
+            // GameManager.instance.KillPlayer();
+            PlayerControl.instance.playerDP.realValue=0;
+            PlayerControl.instance.BeAttack(PlayerControl.instance.playerHP.realValue);
         }
     }
 }

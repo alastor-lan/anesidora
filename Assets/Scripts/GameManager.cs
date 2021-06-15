@@ -37,8 +37,8 @@ public class GameManager : MonoBehaviour
     public GameObject coinPre;
     public GameObject mpPre;
 
-   public PlayerControl player;
-  Room room;
+    PlayerControl player;
+    Room room;
     private void Awake()
     {
         instance = this;
@@ -78,6 +78,18 @@ public class GameManager : MonoBehaviour
         DPText.text = player.playerDP.realValue + "/" + player.playerDP.maxValue;
         MPImage.fillAmount = player.playerMP.realValue / player.playerMP.maxValue;
         MPText.text = player.playerMP.realValue + "/" + player.playerMP.maxValue;
+    }
+    public void ClearPlayerInfo()
+    {
+        player.playerHP.realValue = player.playerHP.maxValue;
+        player.playerDP.realValue = player.playerDP.maxValue;
+        player.playerMP.realValue = player.playerMP.maxValue;
+    }
+    public void KillPlayer()
+    {
+        player.playerHP.realValue = 0;
+        player.playerDP.realValue = 0;
+        player.isDie = true;
     }
     public void GameOver()
     {

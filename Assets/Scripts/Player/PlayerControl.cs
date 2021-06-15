@@ -47,14 +47,24 @@ public class PlayerControl : MonoBehaviour, BeAttack
     bool dpRestore = false;
     private void Awake()
     {
-        instance = this;
+          instance = this;
+
     }
-    private void Start()
+
+  private void Start()
     {
         myPlayer = Instantiate(playerPrefab, transform);
         playerAnima = myPlayer.GetComponent<Animator>();
         myRigidbody = transform.GetComponent<Rigidbody2D>();
         isDie = false;
+        if(playerHP.maxValue > 0)
+        {
+           DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            DestroyImmediate(gameObject);
+        }
     }
     void Update()
     {
@@ -249,6 +259,9 @@ public class PlayerControl : MonoBehaviour, BeAttack
             isDie = true;
             GameManager.instance.GameOver();
             GetComponent<Collider2D>().enabled = false;
+            GameManager.instance.ClearPlayerInfo();
+            Destroy(myPlayer);
+            Destroy(myWeapon);
         }
         else
         {

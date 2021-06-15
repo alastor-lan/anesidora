@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f1410af3d1611842800c1dd0061fefe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FlowName: FlowChart
   ChatName: dialog2
 --- !u!114 &7460085687435951740
 MonoBehaviour:
