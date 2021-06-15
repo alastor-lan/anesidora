@@ -7,13 +7,15 @@ public class EndDoor : MonoBehaviour
 {
     public string chapterName;
     public bool isRight;
+    [SerializeField] private string newchapterPassword;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (isRight)
         {
             if (collision.transform.tag =="Player")
             {
-               SceneManager.LoadScene(chapterName);
+                PlayerControl.instance.chapterPassword = newchapterPassword;
+                SceneManager.LoadScene(chapterName);
              }
         }
         else

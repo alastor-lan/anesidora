@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        
     }
     void Start()
     {
@@ -82,6 +83,7 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         gameOverGO.SetActive(true);
+        
         restart.onClick.AddListener(() => { SceneManager.LoadScene("ch1"); });
     }
     public void Gamepause()

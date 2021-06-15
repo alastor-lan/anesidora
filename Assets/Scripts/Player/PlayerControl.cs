@@ -25,16 +25,18 @@ public class PlayerControl : MonoBehaviour, BeAttack
     public float moveSpeed = 5f;
     public float dpCD1 = 1f;
     public float dpCD2 = 0.5f;
+    public string chapterPassword;
 
     public GameObject playerPrefab;
     public bool isDie;
     private Rigidbody2D myRigidbody;
     private Weapon weapon;
     private Animator playerAnima;
-    GameObject myPlayer;
+    public GameObject myPlayer;
     GameObject myWeapon;
     Vector2 movement;
     Vector2 target;
+
 
     bool fireKeyDown;
     bool fireKeyUp;
@@ -48,6 +50,7 @@ public class PlayerControl : MonoBehaviour, BeAttack
     private void Awake()
     {
         instance = this;
+        
     }
     private void Start()
     {
@@ -55,6 +58,20 @@ public class PlayerControl : MonoBehaviour, BeAttack
         playerAnima = myPlayer.GetComponent<Animator>();
         myRigidbody = transform.GetComponent<Rigidbody2D>();
         isDie = false;
+        if (playerHP.realValue > 0)
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+
+            Destroy(gameObject);
+           
+        }
+
+        
+
+
     }
     void Update()
     {
