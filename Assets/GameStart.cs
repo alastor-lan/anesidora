@@ -20,4 +20,8 @@ public class GameStart : MonoBehaviour
     {
         SceneManager.LoadScene("ch1");
     }
+    public void clickQuit()
+    {
+        Application.Quit();
+    }
 }
