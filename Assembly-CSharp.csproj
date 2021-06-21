@@ -65,6 +65,7 @@
     <Compile Include="Assets\Backpack.cs" />
     <Compile Include="Assets\Dont.cs" />
     <Compile Include="Assets\FinalChat.cs" />
+    <Compile Include="Assets\GameStart.cs" />
     <Compile Include="Assets\LockerActive.cs" />
     <Compile Include="Assets\Necklace.cs" />
     <Compile Include="Assets\OutSiders\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
