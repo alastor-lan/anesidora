@@ -10,6 +10,7 @@ public class Weapon : MonoBehaviour, GetTipsInfo
     public string role;
     [HideInInspector]
     public Vector3 target;
+   // public bool isFire;
     //public int sight;
     public string weaponName;
     public virtual void ShootButtonDown()

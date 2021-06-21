@@ -16,7 +16,7 @@ public class HideDoor : MonoBehaviour
          {
             hidewall.SetActive(false);
             hideroom.SetActive(true);
-            door.SetActive(false);
+            Destroy(door);
            // this.GameObject.SetActive(false);
 
          }

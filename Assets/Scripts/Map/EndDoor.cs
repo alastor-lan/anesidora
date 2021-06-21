@@ -7,22 +7,55 @@ public class EndDoor : MonoBehaviour
 {
     public string chapterName;
     public bool isRight;
-   
+    private bool isEnter=false;
+    Collider2D collision;
+    [SerializeField] private string newchapterPassword;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (isRight)
+       isEnter = true;
+    }
+    private void Start()
+    {
+       // collision = Collider2D .FindObjectOfType ;
+    }
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Q))
         {
-            if (collision.transform.tag =="Player")
+            EnterDoor();
+        }
+    }
+    void EnterDoor()
+    {
+        if (isEnter)
+        {
+            if (isRight)
             {
-               SceneManager.LoadScene(chapterName);
-             }
+                //if (collision.transform.tag == "Player")
+               // {
+                    if (Input.GetKeyDown(KeyCode.Q))
+                    {
+                        SceneManager.LoadScene(chapterName);
+                        PlayerControl.instance.chapterPassword = newchapterPassword;
+                    }
+
+              //  }
+            }
+            else
+            {
+                //if (collision.transform.tag == "Player")
+               // {
+                    if (Input.GetKeyDown(KeyCode.Q))
+                    {
+                        // GameManager.instance.KillPlayer();
+                        PlayerControl.instance.playerDP.realValue = 0;
+                        PlayerControl.instance.BeAttack(PlayerControl.instance.playerHP.realValue);
+                    }
+
+               // }
+
+            }
         }
-        else
-         if (collision.transform.tag == "Player")
-        {
-            // GameManager.instance.KillPlayer();
-            PlayerControl.instance.playerDP.realValue=0;
-            PlayerControl.instance.BeAttack(PlayerControl.instance.playerHP.realValue);
-        }
+        
     }
 }

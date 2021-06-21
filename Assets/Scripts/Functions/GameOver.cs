@@ -21,7 +21,7 @@ public class GameOver : MonoBehaviour
     public void Over()
     {
         GameManager.instance.GameOver();
-        GameManager.instance.ClearPlayerInfo();
+        //PlayerControl.instance.isDie = false;
    
     }
 }

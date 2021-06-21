@@ -10,6 +10,7 @@ TagManager:
   - Door
   - Wall
   - Room
+  - Window
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - Monster
   - Weapon
   - Room
-  - 
+  - MiniMap
   - 
   - 
   - 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class LockerActive : MonoBehaviour
 {
     public GameObject locker;
+    public GameObject Hermes;
     private bool canOpen = false;
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -30,6 +31,7 @@ public class LockerActive : MonoBehaviour
         if (canOpen)
         {
             locker.SetActive(true);
+            Hermes.SetActive(true);
         }
         
     }

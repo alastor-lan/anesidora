@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 1621352590444013463, guid: 95281ba2b17b6ed45b1b9bf510f69d34,
         type: 3}
       propertyPath: weaponName
-      value: "\u5251"
+      value: "\u91CC\u6602\u7684\u9EC4\u91D1\u5251\uFF0C\u4F3C\u4E4E\u6709\u7740\u975E\u540C\u5BFB\u5E38\u7684\u529B\u91CF"
       objectReference: {fileID: 0}
     - target: {fileID: 1621352590444013463, guid: 95281ba2b17b6ed45b1b9bf510f69d34,
         type: 3}
@@ -31,12 +31,12 @@ PrefabInstance:
     - target: {fileID: 2075498858112542409, guid: 95281ba2b17b6ed45b1b9bf510f69d34,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.8125
+      value: 0.9285714
       objectReference: {fileID: 0}
     - target: {fileID: 2075498858112542409, guid: 95281ba2b17b6ed45b1b9bf510f69d34,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.8125
+      value: 0.9285714
       objectReference: {fileID: 0}
     - target: {fileID: 4353834934884547682, guid: 95281ba2b17b6ed45b1b9bf510f69d34,
         type: 3}

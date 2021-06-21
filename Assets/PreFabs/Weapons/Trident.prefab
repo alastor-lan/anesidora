@@ -12,6 +12,17 @@ PrefabInstance:
       propertyPath: shoot
       value: Trident_Shoot
       objectReference: {fileID: 0}
+    - target: {fileID: 1621352590444013463, guid: 95281ba2b17b6ed45b1b9bf510f69d34,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 2718453721348544251, guid: ada733e3603e53340833d15a36e3468d,
+        type: 3}
+    - target: {fileID: 1621352590444013463, guid: 95281ba2b17b6ed45b1b9bf510f69d34,
+        type: 3}
+      propertyPath: attack
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 2075498858112542409, guid: 95281ba2b17b6ed45b1b9bf510f69d34,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -93,5 +104,15 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: c8b6e1a2ded414c4fb0fa88014516f98, type: 2}
+    - target: {fileID: 5655518708774270459, guid: 95281ba2b17b6ed45b1b9bf510f69d34,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8130695784008772512, guid: 95281ba2b17b6ed45b1b9bf510f69d34,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95281ba2b17b6ed45b1b9bf510f69d34, type: 3}

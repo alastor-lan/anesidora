@@ -27,7 +27,7 @@ public class LittleMap : MonoBehaviour
     public void UpdatePlayerIndex(int num)
     {
         int mapNum = num / 5 * 18 + num % 5 * 2;
-        playerIndex.transform.position = mapItems[mapNum].transform.position;
+        //playerIndex.transform.position = mapItems[mapNum].transform.position;
     }
     /// <summary>
     /// 更新可以探索的地方
@@ -57,8 +57,8 @@ public class LittleMap : MonoBehaviour
                     break;
             }
             int nextRoomNum = nextRoom.roomNum / 5 * 18 + nextRoom.roomNum % 5 * 2;
-            mapItems[nextRoomNum].gameObject.SetActive(true);
-            mapItems[roadNum].gameObject.SetActive(true);
+           //mapItems[nextRoomNum].gameObject.SetActive(true);
+           // mapItems[roadNum].gameObject.SetActive(true);
         }
     }
     /// <summary>
@@ -66,15 +66,15 @@ public class LittleMap : MonoBehaviour
     /// </summary>
     public void UpdateRoomsExploredInMap(int room)
     {
-        int mapNum = room / 5 * 18 + room % 5 * 2;
-        mapItems[mapNum].GetComponent<Image>().color = new Color(1, 1, 1, 1);
+        //int mapNum = room / 5 * 18 + room % 5 * 2;
+       // mapItems[mapNum].GetComponent<Image>().color = new Color(1, 1, 1, 1);
     }
     /// <summary>
     /// 显示特定某个房间
     /// </summary>
     public void ShowTheRoom(int room)
     {
-        int mapNum = room / 5 * 18 + room % 5 * 2;
-        mapItems[mapNum].gameObject.SetActive(true);
+        //int mapNum = room / 5 * 18 + room % 5 * 2;
+       // mapItems[mapNum].gameObject.SetActive(true);
     }
 }

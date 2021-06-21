@@ -345,6 +345,9 @@
     <Reference Include="DOTweenEditor">
       <HintPath>D:/git/anesidora/Assets/OutSiders/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>D:/git/anesidora/Library/PackageCache/com.unity.render-pipelines.core@7.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>D:/git/anesidora/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>

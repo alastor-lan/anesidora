@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     public LittleMap littleMap;
     public Transform weaponRecycle;
     public GameObject tips;
+    public GameObject tipsImage;
     public List<GameObject> troops;
 
     public GameObject coinPre;
@@ -123,16 +124,30 @@ public class GameManager : MonoBehaviour
     public void UpdateTipsInfo(string s)
     {
         tips.SetActive(true);
+        tipsImage.SetActive(true);
         tips.GetComponent<Text>().text = s;
     }
     public void CloseTips()
     {
         tips.SetActive(false);
+        tipsImage.SetActive(false);
     }
     public void ShowAttack(float data, Vector3 pos)
     {
         GameObject textgo = Instantiate(beAttackText, pos, Quaternion.identity);
         textgo.transform.SetParent(GameObject.Find("Canvas").transform);
         textgo.GetComponent<Text>().text = "-" + data;
+    }
+    public void Reborn()
+    {
+        Destroy(PlayerControl.instance.gameObject);
+    }
+    public void Pause()
+    {
+        Time.timeScale = 0;
+    }
+    public void GoOn()
+    {
+        Time.timeScale = 1;
     }
 }

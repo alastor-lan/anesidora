@@ -16,11 +16,14 @@ public class SpecificValue
 }
 public class PlayerControl : MonoBehaviour, BeAttack
 {
+   // public bool isDestroy;
+    public GameObject smallui;
     public static PlayerControl instance;
     public SpecificValue playerHP;
     public SpecificValue playerDP;
     public SpecificValue playerMP;
     public int coin;
+    public string chapterPassword;
     //move
     public float moveSpeed = 5f;
     public float dpCD1 = 1f;
@@ -32,13 +35,14 @@ public class PlayerControl : MonoBehaviour, BeAttack
     private Weapon weapon;
     private Animator playerAnima;
     GameObject myPlayer;
-    GameObject myWeapon;
+    public GameObject myWeapon;
     Vector2 movement;
     Vector2 target;
 
     bool fireKeyDown;
     bool fireKeyUp;
     bool fireKeyPressed;
+    bool weaponKeyDown;
     GameObject weaponInFloor;
     List<GameObject> nearWeapons = new List<GameObject>();
     float timing;
@@ -72,13 +76,14 @@ public class PlayerControl : MonoBehaviour, BeAttack
         //{
         //    GameManager.instance.ShowAttack(1, Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 1, 0)));    
         //}
-        fireKeyDown = Input.GetMouseButtonDown(0);
-        fireKeyUp = Input.GetMouseButtonUp(0);
+        fireKeyDown = Input.GetKeyDown(KeyCode.LeftShift);
+        fireKeyUp = Input.GetKeyUp(KeyCode.LeftShift);
+        weaponKeyDown= Input.GetKeyUp(KeyCode.E);
         if (fireKeyDown)
         {
             timing = 0;
         }
-        if (Input.GetMouseButton(0))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             timing += Time.deltaTime;
         }
@@ -110,7 +115,7 @@ public class PlayerControl : MonoBehaviour, BeAttack
                 playerAnima.SetBool("run", true);
             }
             Ray2DForCircle();
-            if (weaponInFloor != null && fireKeyDown)
+            if (weaponInFloor != null && weaponKeyDown)
             {
                 GetWeapon();
             }
@@ -255,12 +260,13 @@ public class PlayerControl : MonoBehaviour, BeAttack
         }
         if (playerHP.realValue <= 0)
         {
+            smallui.SetActive(false);
             playerAnima.SetBool("die", true);
             isDie = true;
             GameManager.instance.GameOver();
             GetComponent<Collider2D>().enabled = false;
             GameManager.instance.ClearPlayerInfo();
-            Destroy(myPlayer);
+            //Destroy(myPlayer);
             Destroy(myWeapon);
         }
         else
@@ -270,4 +276,12 @@ public class PlayerControl : MonoBehaviour, BeAttack
             GameManager.instance.ShowAttack(data, Camera.main.WorldToScreenPoint(transform.position + new Vector3(0, 1, 0)));
         }
     }
+    /*void Des()
+    {
+        if(isDestroy)
+        {
+            myWeapon.SetActive(false);
+        }
+    }
+    */
 }

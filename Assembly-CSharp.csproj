@@ -62,7 +62,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Backpack.cs" />
+    <Compile Include="Assets\Dont.cs" />
+    <Compile Include="Assets\FinalChat.cs" />
     <Compile Include="Assets\LockerActive.cs" />
+    <Compile Include="Assets\Necklace.cs" />
     <Compile Include="Assets\OutSiders\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\OutSiders\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
     <Compile Include="Assets\OutSiders\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
@@ -74,9 +78,13 @@
     <Compile Include="Assets\Scripts\Functions\EnLighten1.cs" />
     <Compile Include="Assets\Scripts\Functions\EnLighten2.cs" />
     <Compile Include="Assets\Scripts\Functions\EnLighten3.cs" />
+    <Compile Include="Assets\Scripts\Functions\Entrance.cs" />
     <Compile Include="Assets\Scripts\Functions\GameOver.cs" />
     <Compile Include="Assets\Scripts\Functions\GamePause.cs" />
     <Compile Include="Assets\Scripts\Functions\HealthBar.cs" />
+    <Compile Include="Assets\Scripts\Functions\MainCamera.cs" />
+    <Compile Include="Assets\Scripts\Functions\NPCDialogue.cs" />
+    <Compile Include="Assets\Scripts\Functions\Sphinx.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\MagicCrystal.cs" />
     <Compile Include="Assets\Scripts\Map\Door.cs" />
@@ -92,7 +100,7 @@
     <Compile Include="Assets\Scripts\Monster\Monster0103.cs" />
     <Compile Include="Assets\Scripts\Monster\MonsterBoss.cs" />
     <Compile Include="Assets\Scripts\Monster\MyAstarAI.cs" />
-    <Compile Include="Assets\Scripts\NPCDialogue.cs" />
+    <Compile Include="Assets\Scripts\Open.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\Room\Room.cs" />
     <Compile Include="Assets\Scripts\Room\RoomBoss.cs" />
@@ -100,11 +108,22 @@
     <Compile Include="Assets\Scripts\Room\RoomStart.cs" />
     <Compile Include="Assets\Scripts\Room\RoomTreasure.cs" />
     <Compile Include="Assets\Scripts\Room\RoomTrig.cs" />
-    <Compile Include="Assets\Scripts\Sphinx.cs" />
     <Compile Include="Assets\Scripts\UI\BeAttackText.cs" />
     <Compile Include="Assets\Scripts\UI\BtnsControl.cs" />
     <Compile Include="Assets\Scripts\UI\LittleMap.cs" />
     <Compile Include="Assets\Scripts\UI\MapItem.cs" />
+    <Compile Include="Assets\Scripts\UI\Pieces\AbsorbCol_1.cs" />
+    <Compile Include="Assets\Scripts\UI\Pieces\AbsorbCol_2.cs" />
+    <Compile Include="Assets\Scripts\UI\Pieces\AbsorbCol_3.cs" />
+    <Compile Include="Assets\Scripts\UI\Pieces\AbsorbCol_4.cs" />
+    <Compile Include="Assets\Scripts\UI\Pieces\ButtonBase.cs" />
+    <Compile Include="Assets\Scripts\UI\Pieces\DragDemo.cs" />
+    <Compile Include="Assets\Scripts\UI\Pieces\PanelAbsorb_1.cs" />
+    <Compile Include="Assets\Scripts\UI\Pieces\PanelAbsorb_2.cs" />
+    <Compile Include="Assets\Scripts\UI\Pieces\PanelAbsorb_3.cs" />
+    <Compile Include="Assets\Scripts\UI\Pieces\PanelAbsorb_4.cs" />
+    <Compile Include="Assets\Scripts\UI\Pieces\PositionControl.cs" />
+    <Compile Include="Assets\Scripts\UI\Pieces\RotateWindow.cs" />
     <Compile Include="Assets\Scripts\UI\UIEventListener.cs" />
     <Compile Include="Assets\Scripts\Weapon\Bullet\Bullet.cs" />
     <Compile Include="Assets\Scripts\Weapon\Bullet\Bullet1.cs" />
@@ -113,6 +132,8 @@
     <Compile Include="Assets\Scripts\Weapon\Weapons\Gun.cs" />
     <Compile Include="Assets\Scripts\Weapon\Weapons\RainbowHorse.cs" />
     <Compile Include="Assets\Scripts\Weapon\Weapons\Weapon.cs" />
+    <Compile Include="Assets\TextBkg.cs" />
+    <Compile Include="Assets\Trap.cs" />
     <None Include="Assets\OutSiders\Plugins\Demigiant\DOTween\readme.txt" />
     <Reference Include="UnityEngine">
       <HintPath>D:/unity/2019.4.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -648,17 +669,35 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>D:/unity/2019.4.11f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+      <HintPath>D:/git/anesidora/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/git/anesidora/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Cinemachine">
       <HintPath>D:/git/anesidora/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+      <HintPath>D:/git/anesidora/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/git/anesidora/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Editor">
+      <HintPath>D:/git/anesidora/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime">
+      <HintPath>D:/git/anesidora/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/git/anesidora/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+      <HintPath>D:/git/anesidora/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Editor">
+      <HintPath>D:/git/anesidora/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>D:/git/anesidora/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -672,6 +711,9 @@
     <Reference Include="Unity.Rider.Editor">
       <HintPath>D:/git/anesidora/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+      <HintPath>D:/git/anesidora/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
       <HintPath>D:/git/anesidora/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
@@ -680,6 +722,12 @@
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
       <HintPath>D:/git/anesidora/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ShaderGraph.Editor">
+      <HintPath>D:/git/anesidora/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+      <HintPath>D:/git/anesidora/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/git/anesidora/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>

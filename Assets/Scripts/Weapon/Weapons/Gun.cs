@@ -11,6 +11,7 @@ public class Gun : Weapon
     public float timing = 0;
     public string shoot;
     public string idle;
+   // public bool isFire;
     public override void ShootButtonDown()
     {
         if (Time.time - timing >=CD)

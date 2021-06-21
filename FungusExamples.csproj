@@ -288,6 +288,9 @@
     <Reference Include="DOTweenEditor">
       <HintPath>D:/git/anesidora/Assets/OutSiders/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
     </Reference>
+    <Reference Include="ICSharpCode.NRefactory">
+      <HintPath>D:/git/anesidora/Library/PackageCache/com.unity.render-pipelines.core@7.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
     <Reference Include="netstandard">
       <HintPath>D:/unity/2019.4.11f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
     </Reference>

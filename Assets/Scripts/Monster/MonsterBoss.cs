@@ -2,11 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Fungus;
 
 public class MonsterBoss : Boss
 {
     public float strollCD;
     public bool isPure;
+    public string FlowNamePure;
+    public string ChatName1;
+    public string FlowNameNotPure;
+    public string ChatName2;
     public float attackCD = 0.5f;
     public Weapon weapon;
     Animator animator;
@@ -14,15 +19,30 @@ public class MonsterBoss : Boss
     float strolltiming;
     float attacktiming;
     public int MaxHP;
+    //public bool isNecklace;
     private void Start()
     {
         myAI = GetComponent<MyAstarAI>();
         animator = GetComponent<Animator>();
         //注册
+        //animator.SetBool("isNecklace", isNecklace);
         weapon.role = role;
     }
     void Update()
     {
+        if (isPure)
+        {
+            animator.SetBool("isNecklace", true);
+            
+        }
+        if (isPure && hp <= 0)
+        {
+            Say1();
+        }
+        else if (!isPure && hp <= 0)
+        {
+            Say2();
+        }
         switch (bossState)
         {
             case BossState.Idle:
@@ -120,13 +140,13 @@ public class MonsterBoss : Boss
     {
         if(hp<=currentHP)
         {
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
             bossState = BossState.Attack;
             animator.SetBool("isHinshin", true);
             animator.SetBool("isSecond", true);
             animator.SetBool("run", true);
-            if (bossState == BossState.Attack)
-            { Time.timeScale = 1; }
+           /* if (bossState == BossState.Attack)
+            { Time.timeScale = 1; }*/
         }
     }
     public override void BeAttack(float data)
@@ -135,7 +155,29 @@ public class MonsterBoss : Boss
         if (hp <= 0)
         {
             weapon.gameObject.SetActive(false);
-
+           
         }
+    }
+    void Say1()
+    {
+          //对话
+            Flowchart flowChart = GameObject.Find(FlowNamePure).GetComponent<Flowchart>();
+            if (flowChart.HasBlock(ChatName1))
+            {
+                //执行对话
+                flowChart.ExecuteBlock(ChatName1);
+            }
+        
+    }
+    void Say2()
+    {
+        //对话
+        Flowchart flowChart = GameObject.Find(FlowNameNotPure).GetComponent<Flowchart>();
+        if (flowChart.HasBlock(ChatName2))
+        {
+            //执行对话
+            flowChart.ExecuteBlock(ChatName2);
+        }
+
     }
 }

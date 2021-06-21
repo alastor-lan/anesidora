@@ -13,9 +13,11 @@ public enum BossState
 public class Boss : MonoBehaviour, BeAttack
 {
     public float hp;
+    public GameObject smallui;
     public float currentHP;
     public int coin;
     public int magic;
+    public GameObject trap;
     protected string role = "Monster";
     public bool isStart = false;
     protected Transform targetPosition;
@@ -37,9 +39,12 @@ public class Boss : MonoBehaviour, BeAttack
             GetComponent<Animator>().SetBool("isHenshin", true);
             GetComponent<Animator>().SetBool("isFirst", false);
             GetComponent<Animator>().SetBool("isSecond", true);
+            trap.SetActive(true);
+
         }
         if (hp <= 0)
         {
+            smallui.SetActive(false);
             bossState = BossState.Die;
             GetComponent<Animator>().SetBool("isDie", true);
             GetComponent<Collider2D>().enabled = false;
