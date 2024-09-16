@@ -147,11 +147,12 @@ MonoBehaviour:
   hp: 3
   coin: 1
   magic: 1
-  isStart: 0
+  isStart: 1
   pos: {fileID: 36846859768953}
   attackRange: 5
   bulletPre: {fileID: 5800850033905454681, guid: d2f2a8f7efd183a46ae19c468f6ba3ae,
     type: 3}
+  trackingRange: 0
   bulletCount: 20
   bulletForce: 15
   CD: 5

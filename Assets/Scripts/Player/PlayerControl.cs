@@ -25,6 +25,7 @@ public class PlayerControl : MonoBehaviour, BeAttack
     public float moveSpeed = 5f;
     public float dpCD1 = 1f;
     public float dpCD2 = 0.5f;
+    public string chapterPassword;
 
     public GameObject playerPrefab;
     public bool isDie;
@@ -47,7 +48,19 @@ public class PlayerControl : MonoBehaviour, BeAttack
     bool dpRestore = false;
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            if (instance != this)
+            {
+                Destroy(gameObject);
+            }
+        }
+
+        DontDestroyOnLoad(gameObject);
     }
     private void Start()
     {

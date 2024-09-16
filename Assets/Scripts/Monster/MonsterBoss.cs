@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterBoss : Monster
+public class MonsterBoss : Boss
 {
     public float strollCD;
+    public bool isPure;
     public float attackCD = 0.5f;
     public Weapon weapon;
     Animator animator;
@@ -22,19 +23,25 @@ public class MonsterBoss : Monster
     }
     void Update()
     {
-        switch (monsterState)
+        switch (bossState)
         {
-            case MonsterState.Idle:
+            case BossState.Idle:
                 Idle();
                 break;
-            case MonsterState.Stroll:
+            case BossState.Stroll:
                 Stroll();
                 break;
-            case MonsterState.Attack:
+            case BossState.Attack:
                 Attack();
                 break;
-            case MonsterState.Die:
+            case BossState.Die:
                 Die();
+                break;
+            case BossState.Pure:
+                Pure();
+                break;
+            case BossState.Second_Idle:
+                Second_Idle();
                 break;
             default:
                 break;
@@ -68,7 +75,7 @@ public class MonsterBoss : Monster
             int rand = UnityEngine.Random.Range(0, 5);
             if (rand ==1)
             {
-                monsterState = MonsterState.Stroll;
+                bossState = BossState.Stroll;
                 animator.SetBool("run", true);
             }
             else
@@ -88,7 +95,7 @@ public class MonsterBoss : Monster
         UpdateLookAt(targetPosition.position);
         if (myAI.reachedEndOfPath)
         {
-            monsterState = MonsterState.Attack;
+            bossState = BossState.Attack;
             animator.SetBool("run", false);
         }
     }
@@ -97,8 +104,29 @@ public class MonsterBoss : Monster
     {
         if (isStart)
         {
-            monsterState = MonsterState.Attack;
+            bossState = BossState.Attack;
             animator.SetBool("run", true);
+        }
+    }
+    private void Pure()
+    {
+        if (isPure)
+        {
+            bossState = BossState.Pure;
+            animator.SetBool("isNecklace", true);
+        }
+    }
+    private void Second_Idle()
+    {
+        if(hp<=currentHP)
+        {
+            Time.timeScale = 0;
+            bossState = BossState.Attack;
+            animator.SetBool("isHinshin", true);
+            animator.SetBool("isSecond", true);
+            animator.SetBool("run", true);
+            if (bossState == BossState.Attack)
+            { Time.timeScale = 1; }
         }
     }
     public override void BeAttack(float data)
@@ -107,6 +135,7 @@ public class MonsterBoss : Monster
         if (hp <= 0)
         {
             weapon.gameObject.SetActive(false);
+
         }
     }
 }

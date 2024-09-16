@@ -8,14 +8,22 @@ public class Monster0102 :Monster
     public Transform pos;
     public float attackRange;
     public GameObject bulletPre;
+    public float trackingRange;
     public int bulletCount;
     public float bulletForce;
     public float CD = 5;
     public int attack;
     float timing;
-
+    MyAstarAI myAI;
+    float trackingtiming;
+    float strolltiming;
+    float attacktiming;
+    bool seeTarget;
+    LayerMask layerMask;
+    RaycastHit2D hit;
     void Start()
     {
+        myAI = GetComponent<MyAstarAI>();
         timing = -CD;
         monsterState = MonsterState.Idle;
     }
@@ -31,6 +39,9 @@ public class Monster0102 :Monster
                 break;
             case MonsterState.Die:
                 Die();
+                break;
+            case MonsterState.Stroll:
+                Stroll();
                 break;
             default:
                 break;
@@ -60,12 +71,36 @@ public class Monster0102 :Monster
             }
         }
     }
-
+    void Stroll()
+    {
+        RaycastDetection();
+        if (seeTarget)
+        {
+            monsterState = MonsterState.Tracking;
+        }
+       
+        myAI.NextTarget();
+    }
     private void Idle()
     {
         if (isStart)
         {
             monsterState = MonsterState.Tracking;
+        }
+    }
+    public void RaycastDetection()
+    {
+        hit = Physics2D.Raycast(transform.position + Vector3.up, (targetPosition.position - (transform.position + Vector3.up)).normalized, trackingRange, layerMask);
+        //Debug.DrawLine(transform.position+Vector3.up, transform.position+(targetPosition.position - transform.position).normalized*10, Color.red);
+
+        if (hit.transform != null && hit.transform == targetPosition)
+        {
+            seeTarget = true;
+            Debug.DrawLine(transform.position + Vector3.up, hit.transform.position, Color.red);
+        }
+        else
+        {
+            seeTarget = false;
         }
     }
 }

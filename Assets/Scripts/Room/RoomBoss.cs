@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoomBoss : Room
 {
-    public Monster Boss;
+    public Boss Boss;
     public GameObject endDoor;
     public GameObject healthBar;
     public override void Initialization()
@@ -12,9 +12,9 @@ public class RoomBoss : Room
         base.Initialization();
         Boss.Initialization(this);
     }
-    public override void MonsterDie(Monster monster)
+    public override void BossDie(Boss boss)
     {
-        base.MonsterDie(monster);
+        base.BossDie(boss);
         endDoor.SetActive(true);
         isExplored = true;
     }

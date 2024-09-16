@@ -130,17 +130,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHP:
-    realValue: 5
-    maxValue: 5
+    realValue: 100
+    maxValue: 100
   playerDP:
     realValue: 5
     maxValue: 5
   playerMP:
     realValue: 100
     maxValue: 100
+  coin: 0
   moveSpeed: 5
+  dpCD1: 1
+  dpCD2: 0.5
   playerPrefab: {fileID: 6270363222853746770, guid: e921b3d5f7e797f40a8d78fee423433f,
     type: 3}
+  isDie: 0
 --- !u!50 &2937975391746533798
 Rigidbody2D:
   serializedVersion: 4
